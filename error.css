@@ -1,0 +1,119 @@
+
+  /*header til computer*/
+  .topnav {
+    overflow: hidden;
+    background-color: #e2e2e2;
+  }
+  
+  .topnav a {
+    float: right;
+    display: block;
+    color: rgb(70, 42, 255);
+    text-align: center;
+    padding: 32px 72px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 0.5px;
+
+  }
+  
+  .topnav a:hover {
+    color: grey;
+  }
+  
+  .topnav a.active {
+    color: rgb(0, 0, 0);
+    position: relative;
+    right:89%;
+    top:-15px;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+  /*Header til mobil*/
+  .activemob {
+    position:relative;
+    left:155px;
+    top:-112px;
+    
+  }
+
+  
+/*tekst css*/
+    .errortekst{
+        font-family:'Amatic SC', cursive;
+        font-size: 200%;
+        text-align: center;
+        position: relative;
+        top:140px;
+}    
+
+p1{
+    color:blue;
+    font-size: 310%;
+}
+
+p2{
+    color:black;
+    font-size: 210%;
+}
+
+p3{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+#burgerfald{
+    position: relative;
+    right:-830px;
+    top:-250px;
+    z-index: -1;
+}
+
+#burgerfald1{
+  position: relative;
+    left:175px;
+    top:120px;
+    z-index: -1;
+}
+
+/*Responsive layout - mobil*/
+@media screen and (max-width: 600px){
+.errortekst{
+  font-size: 25px;
+  margin-top: -180px;
+}
+#burgerfald{
+  display: none;
+}
+}
+
+ /* Responsive layout - storskærm*/
+ @media screen and (min-width: 1200px){
+  .sidenav{
+    display:none;
+    }
+  
+    #openNav{
+      display:none;
+    }
+  
+    .SPADSER{
+      display: none;
+    }
+    .activemob{
+      display: none;
+    }
+
+    #burgerfald1{
+      display:none;
+    }
+    
+  }
