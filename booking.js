@@ -1,0 +1,91 @@
+let biler = []; // Global variabel, kendt af alle
+fetch("https://api.jsonbin.io/b/6137477a85791e1732a15029") // Husk at URL skal passe med json data 
+// fetch("js/biler.json") // Eksempel med billiste fra lokal fil. Husk at kløre live server.
+    .then(function (data) { //støbt i cement
+        return data.json(); //støbt i cement
+    })                      //støbt i cement
+    .then(function (post) {
+        biler = post.billiste; // Global variable sat til JSON indhold
+    })
+
+// Javascript til udfyldning af bookingfeltet
+const sektion = document.getElementById('bil_sektion');
+const skabelon = document.getElementById('skabelon_output');
+const personer = document.getElementById('personer');
+const kufferter = document.getElementById('kufferter');
+const formular = document.getElementById('formular');
+const afhentningsdato = document.getElementById('afhentning');
+const afleveringsdato = document.getElementById('aflevering');
+
+formular.addEventListener("submit", function (event) {
+    event.preventDefault();
+    if (valideDatoer(afhentningsdato.value, afleveringsdato.value)) {
+        sektion.innerHTML = ""; //Nulstiller output-sektion
+        for (const bil of biler) {
+            if (kufferter.value <= bil.kufferter && personer.value <= bil.personer) {
+                const antaldage = beregnAntalLejedage(afhentningsdato.value, afleveringsdato.value);
+                const klon = skabelon.content.cloneNode(true);
+                const bilMM = klon.querySelector(".bilMM");
+                const billedtag = klon.querySelector("img");
+                const kategori = klon.querySelector(".kategori");
+                const antalpersoner = klon.querySelector(".antalpersoner");
+                const antalkufferter = klon.querySelector(".antalkufferter");
+                const lejeudgift = klon.querySelector(".lejeudgift");
+                const link = klon.querySelector("a");
+
+                link.href = `udstyr.html?bil=${bil.bilmaerke}&afhentning=${afhentningsdato.value}&aflevering=${afleveringsdato.value}&lejedage=${antaldage}&lejeudgift=${beregnLejeudgift(antaldage, bil.tillaeg)}`;
+                billedtag.src = bil.billede;
+                billedtag.alt = bil.billedtekst;
+                bilMM.textContent = bil.bilmaerke;
+                kategori.textContent += bil.kategori;
+                antalkufferter.textContent += bil.kufferter;
+                antalpersoner.textContent += bil.personer;
+                lejeudgift.textContent = "kr. " + beregnLejeudgift(antaldage, bil.tillaeg);
+                sektion.appendChild(klon);
+            }
+        }
+    } else {
+        sektion.innerText = "Opgiv en afleveringsdato som ligger efter afhentingsdato.";
+    }
+
+})
+
+// Hvis afhentingsdatoen ligger efter afleveringsdatoen returneres en fejlmelding. 
+function valideDatoer(afhentningsdato, afleveringsdato) {
+    const afhentning = new Date(afhentningsdato);
+    const aflevering = new Date(afleveringsdato);
+    if (afhentning > aflevering) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+// Der beregnes her hvor mange dage foodtrucken skal lejes
+function beregnAntalLejedage(afhentningsdato, afleveringsdato) {
+    const AFHENTNING = new Date(afhentningsdato);
+    const AFLEVERING = new Date(afleveringsdato);
+    const FORSKELITID = AFLEVERING.getTime() - AFHENTNING.getTime();
+    const FORSKELIDAGE = FORSKELITID / (1000 * 3600 * 24) + 1;
+    return FORSKELIDAGE;
+}
+
+// Beregning af pris for leje af foodtruck
+function beregnLejeudgift(antaldage, biltillaeg) {
+    const MOMS = 0.25;
+    const GRUNDBELOEB = 495;
+    const PRISPRDAG = 100;
+    const LEJEUDGIFT = (GRUNDBELOEB + (antaldage * PRISPRDAG) + (antaldage * biltillaeg)) * (1 + MOMS);
+    return LEJEUDGIFT.toFixed(2);
+}
+
+// Javascript til sidenav og burgerbar for mobil-format
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+

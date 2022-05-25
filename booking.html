@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Broedrenes Original giver dig mulighed for at booke deres foodtruck til din næste begivenhed. Brodrene bring maden til dig og dine gæster, i højt humor og formidabel service. Alt man skal gøre, er blot at udfylde formularen, så kontakter brodrene dig til en snak om detaljer og parktik.">
+    <meta name="keywords" content="Udlejning, udlevering, privat, fødselsdag, bryllup, studentergilde, konfirmation, guldbryllup, Take away, jylland, sjælland, fyn, Burger, Flæskestegssandwich, Frikadellesandwich, Vegetarburger, Foodtruck, udlejningsfirma, booking, kvalitet, dansk mad, find os, kontakt, Instagram, Facebook, E-smiley, anmeldelser, selskabsmad, begivenheder, børn, voksne, vegetarer, service, humor">
+
+    <!-- links til css og javascript  -->
+    <link rel="stylesheet" href="css/booking.css">
+    <script src="booking.js"></script>
+
+<!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+
+        <!-- Her koder vi vores favicon der vises i fanebladet-->
+        <link rel="icon" type="icon/png" href="img/ikon1.png"/>
+
+<!-- Titel på site -->
+    <title>Brødrenes Original</title>
+</head>
+
+
+<body style="background:#e2e2e2;">
+<!-- Header med logo og menupunkter  -->
+  <!--Credit:https://www.w3schools.com/howto/howto_css_topnav_split.asp-->
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="omos.html">OM OS</a>
+        <a href="find1.html">FIND OS</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="menukort.html">MENUKORT</a>
+        <a href="index.html" class="active"><img src="img/ikon1.png" alt="Broedrenes Original logo" width="52px" height="52px"></a>
+
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+<!--burgerbar til mobil, med sidenav og logo-->
+<!--Credit:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav&fbclid=IwAR0FhPN4UraaUpSKHkpjJ47PicZHa51OjuEDNhMm19T0_bwIS3_CTtvbeHc -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="menukort.html">Menukort</a>
+  <a href="booking.html">Booking</a>
+  <a href="find1.html">Find Os</a>
+  <a href="omos.html">Om Os</a>
+</div>
+
+<div class="SPADSER">
+<span onclick="openNav()">&#9776; </span>
+</div>
+
+<a href="index.html" class="activemob"><img src="img/ikon1.png" alt="Broedrenes Original logo" style="width:38px;height:38px;"></a>
+
+      
+</header>
+<!--formular til booking af foodtruck-->
+<!--Credit: Underviser Kim & Morten-->
+  <section class="billed_sektion">
+    <form id="formular" class="formular" action="" method="">
+        <h1 class="formular_overskrift">Book vores foodtruck</h1>
+
+        <div class="formular_felter">
+            <div>
+                <label for="afhentning" class="etiket">Start dag</label>
+                <input type="date" id="afhentning" required>
+            </div>
+
+            <div>
+                <label for="aflevering" class="etiket">Slut dag</label>
+                <input type="date" id="aflevering" required>
+            </div>
+
+            <div>
+                <label for="personer" class="etiket">Antal personer</label>
+                <input type="number" value="1" id="personer" max="70" min="1" required>
+            </div>
+
+            <div>
+                <label for="kufferter" class="etiket">Antal vegetarer</label>
+                <select id="kufferter">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+        <a href="udfyld.html" button type="submit" class="videreknap" id="videreknap" tabindex="7">Næste</a>
+</section>
+
+<!--Billeder og vejledende/informerende tekst-->
+<div class="pose">
+  <img src="img/figur1pose1.png" alt="Mand holder pose med take away fra Broedrenes Original" width="700px">
+</div>
+<div class="posemob">
+  <img src="img/posemob1.png" alt="Pose med take away fra Broedrenes Original" width="360px" height="700px">
+</div>
+
+<div class="tale1">
+  <img src="img/talebobelbooking1.png" alt="Taleboble med information om booking af food truck fra Broedrenes Original" width="500px">
+</div>
+
+<p3>Lej vores foodtruck til din næste begivenhed!<br> Vi bringer, kører og fikser mad til alle dine gæster!</p3>
+<p4><br>Udfyld formularen og vi vender tilbage for at <br> snakke om detaljer og alt det praktiske</p4>
+
+
+
+<!--Sidens footer-->
+<section class="footer">
+  <ul class="list">
+    <li>
+      <a href="https://www.facebook.com/Broedrenes/" target="_blank">FACEBOOK</a>
+    </li>
+    <li>
+      <a href="error.html" target="_blank">INSTAGRAM</a>
+    </li>
+    <li>
+      <a href="https://www.findsmiley.dk/1143962" target="_blank" >E-smiley</a>
+    </li>
+  </ul>
+  <p class="copyright">Broedrenes Original &copy; 2021</p>
+</section>
+</body>
+
+
+</html>

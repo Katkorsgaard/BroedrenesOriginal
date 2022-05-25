@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Broedrenes Original startede med 2 brodre, Theis og Magnus, der fik en ide under corona. De drømte om at starte et uformelt spisested op, hvor man ikke går på kompromis på kvaliteten. De startede med at holde til på forskellige paldser, såsom fotexfood i cersbyen. På nuværende tidspunkt, holder de til på pladsen torv, samt kan man booke deres foodtruck til arrangementer. Brodrene går på i at serverer mad af gode råvare med fokus på dyrevelfærd.">
+    <meta name="keywords" content=", Brødrenes Original, Theis og Magnus, brødre, drømme, iværksætteri,nyt spisested, Take away, spisested, Aarhus, Øen, Borggade 12b, 8000, Aarhus C, Burger, Flæskestegssandwich, Frikadellesandwich, Vegetarburger, Foodtruck, udlejningsfirma, booking, kvalitet, dansk mad, Menukort, om os, find os, adresse, kontakt, Instagram, Facebook, E-smiley, anmeldelser, selskabsmad, begivenheder">
+
+    <!-- links til css -->
+    <link rel="stylesheet" href="css/omos.css">
+    <script src="om.js"></script>
+
+<!-- Fonte -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Lato:wght@100&display=swap" rel="stylesheet">
+
+        <!-- Her koder vi vores favicon der vises i fanebladet-->
+        <link rel="icon" type="icon/png" href="img/ikon1.png"/>
+
+<!-- Titel på site -->
+    <title>Brødrenes Original</title>
+</head>
+
+<body style="background:#e2e2e2;">
+
+<!-- Header med logo og menupunkter  -->
+ <!--Credit:https://www.w3schools.com/howto/howto_css_topnav_split.asp-->
+<header>
+    <div class="topnav" id="myHeader">
+        <a href="omos.html">OM OS</a>
+        <a href="find1.html">FIND OS</a>
+        <a href="booking.html">BOOKING</a>
+        <a href="menukort.html">MENUKORT</a>
+        <a href="index.html" class="active"><img  src="img/ikon1.png" alt="Broedrenes Original logo" width="52px" height="52px"></a>
+      </div>
+
+      <!--javascript til header-->
+      <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
+ 
+<!--burgerbar til mobil-->
+<!--Credit:https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav&fbclid=IwAR0FhPN4UraaUpSKHkpjJ47PicZHa51OjuEDNhMm19T0_bwIS3_CTtvbeHc -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="menukort.html">Menukort</a>
+  <a href="booking.html">Booking</a>
+  <a href="find1.html">Find Os</a>
+  <a href="omos.html">Om Os</a>
+</div>
+
+<div class="SPADSER">
+<span onclick="openNav()">&#9776; </span>
+</div>
+<a href="index.html" class="activemob"><img src="img/ikon1.png" alt="Broedrenes Original logo" style="width:38px;height:38px;"></a>
+     
+</header>
+
+<main>
+  <!-- Tekst til mobilversion -->
+  <div class="tekst">
+    <h1>Bag om Brødrenes</h1>
+    <p>
+      Brødrenes Original startede med to vestjyske brødre, som under coronaepidemien fik en spirende idé.
+      Den idé blev til mange måneders hårdt arbejde, og da kalenderen nåede juni 2021, rullede vi ud over stepperne for at servere jer klassisk, dansk comfort food.
+      Præcis som I kender den - bare bedre. <br>
+      <br>
+      Hos Brødrenes Original husker vi hyggen, og der er altid plads til et grin og en snak over disken. <br>
+      <br>
+
+      <div class="bil">
+        <img src="img/baggrund1.png" alt="Broedrenes Original food truck" width="250px">
+      </div>
+
+      I vores højt elskede foodtruck serveres der en nyfortolkning af den klassiske danske grillmad. Vi har taget det bedste med videre, i form af frikadeller som bedste lavede dem, hendes brune sovs, de sprøde svær og det magre, saftige kød. Og så tilføjer vi Brødrenes crunchy hjemmesylt, sprøde fritter og lækre, hjemmerørte mayonnaiser. Det hele gøres med udgangspunkt i lokale leverandører, og med stor respekt for de danske råvarer. <br> 
+      <br>
+      <div class="hygge">
+      <p>
+      Vi glæder os til at se dig!
+      <br>
+      <p>
+      Og indtil da - Husk hyggen!
+      </p>
+      </div>
+      </p>
+  </div>
+
+ <!--Parallax-effekt med tekst, billeder og video som baggrund-->
+ <!--Credit: https://www.youtube.com/watch?v=fgOYA8Mtvlg-->
+ <div class="ParaContent">
+  <div class="container">
+    <div class="row">
+      <div class="column1">
+        <p>
+          Brødrenes Original startede med to vestjyske brødre, som under coronaepidemien fik en spirende idé.
+          Den idé blev til mange måneders hårdt arbejde, og da kalenderen nåede juni 2021, rullede vi ud over stepperne for at servere jer klassisk, dansk comfort food.
+          Præcis som I kender den - bare bedre. <br>
+          
+          Hos Brødrenes Original husker vi hyggen, og der er altid plads til et grin og en snak over disken. <br>
+          
+          <br><br>  <br><br> I vores højt elskede foodtruck serveres der en nyfortolkning af den klassiske danske grillmad. Vi har taget det bedste med videre, i form af frikadeller som bedste lavede dem, hendes brune sovs, de sprøde svær og det magre, saftige kød. Og så tilføjer vi Brødrenes crunchy hjemmesylt, sprøde fritter og lækre, hjemmerørte mayonnaiser. Det hele gøres med udgangspunkt i lokale leverandører, og med stor respekt for de danske råvarer. <br> 
+          
+          </p>
+      </div>
+        <div class="column2">
+              <img class="mand1" src="img/figur3.png" alt="Illustration af mand der spiser sandwich fra Broedrenes Original">
+              <img class="mand2" src="img/figur4.png" alt="Illustration af kvinde der spiser pomfritter fra Broedrenes Original">
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="column1">
+        <img class="gris" src="img/gris1.png" alt="Illustration af gris">
+    </div>
+
+      <div class="column2">
+          <p>
+            Hos Brødrenes Original går vi ikke på kompromis med dyrevelfærd og kvalitet. <br>
+            Vi stiller høje krav til vores leverandører af det danske, fritgående kød, som vi bruger i vores sandwiches.<br>
+            Glade køer og grise giver nemlig god samvittighed og kød af høj kvalitet. <br>
+          </p>
+          <p>
+          <br>
+            Vi lægger stor vægt på at vores sandwiches skal producers af friske, lokale råvarer. For vi laver klassisk, dansk grillmad, præcis som du kender den. Bare bedre.<br>
+            Det er ikke raketvidenskab. Det handler blot om, at vi prioriterer friske, lokalproducerede råvarer af høj kvalitet. <br>
+            Vi håber, at det betyder lige så meget for jer skønne kunder, som det betyder for os.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overskrift1">
+    <p>"Vi fik en ide under Corona..."</p>
+</div>
+
+<div class="overskrift2">
+    <p>"Frikadeller som bedste lavede dem"</p>
+</div>
+
+  <div class="overskrift3">
+    <p>"Glade køer og grise giver god samvittighed"</p>
+  </div>
+
+  <div class="overskrift4">
+      <p>"Vi glæder os til at se dig! Og indtil da - Husk hyggen!"</p>
+  </div>
+
+    <div class="ParaVideo">
+      <video autoplay muted loop>
+          <source src="video/Kant.mp4" type="video/mp4">
+      </video>
+    </div>
+</main>
+
+<!--Sidens footer-->
+<section class="footer">
+  <ul class="list">
+          <li>
+              <a href="https://www.facebook.com/Broedrenes/" target="_blank">FACEBOOK</a>
+          </li>
+
+          <li>
+              <a href="error.html" target="_blank">INSTAGRAM</a>
+          </li>
+
+          <li>
+              <a href="https://www.findsmiley.dk/1143962" target="_blank" >E-smiley</a>
+          </li>
+  </ul>
+
+      <p class="copyright">Broedrenes Original &copy; 2021</p>
+
+</section>
+
+</body>
+
+</html>
